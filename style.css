@@ -1,0 +1,77 @@
+/* Custom styles for the calculator */
+
+.formula {
+    font-family: monospace;
+    background-color: var(--bs-dark);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.formula-box, .result-box {
+    background-color: var(--bs-secondary-bg);
+    border-radius: 12px;
+    height: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.result-icon {
+    color: var(--bs-primary);
+}
+
+.result-value {
+    font-weight: bold;
+}
+
+/* Smoother edges for input elements */
+.input-group .form-control, 
+.input-group .input-group-text {
+    border-radius: 10px;
+}
+
+.input-group .input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group .form-control {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Animation for highlighting new results */
+@keyframes highlight {
+    0% { color: var(--bs-body-color); }
+    50% { color: var(--bs-success); }
+    100% { color: var(--bs-body-color); }
+}
+
+.highlight {
+    animation: highlight 1s ease-in-out;
+}
+
+/* Icon glow animation */
+@keyframes icon-glow {
+    0% { text-shadow: 0 0 0 transparent; }
+    50% { text-shadow: 0 0 10px var(--bs-warning); }
+    100% { text-shadow: 0 0 0 transparent; }
+}
+
+.icon-glow {
+    animation: icon-glow 1s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .result-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* Style for armor warning */
+#armorWarning {
+    border-left: 4px solid var(--bs-warning);
+    background-color: rgba(var(--bs-warning-rgb), 0.25);
+    border-radius: 10px;
+    color: var(--bs-warning);
+    font-weight: 500;
+}
